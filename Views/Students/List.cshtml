@@ -1,0 +1,17 @@
+﻿@model List<MidtermVersion.Models.Students>
+
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List of Students</h2>
+
+@foreach (var student in Model)
+{
+    <p>@student.Id</p>
+    <p>@student.firstName</p>
+    <p>@student.lastName</p>
+    <p>@student.Grade</p>
+}
+

@@ -4,18 +4,19 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MidtermVersion.Models;
+using System.Data.Entity;
 
 namespace MidtermVersion.Controllers
 {
     public class CoursesController : Controller
     {
-        // GET: Course/list
+        // GET: Course
         public ActionResult List()
         {
             ApplicationDbContext db = new ApplicationDbContext();
             var courses = db.Course.ToList();
 
-            return View();
+            return View(courses);
         }
 
         // GET: Course/Delete
@@ -23,13 +24,7 @@ namespace MidtermVersion.Controllers
         {
             return View();
         }
-
-        // GET: Course/Update
-        public ActionResult Update()
-        {
-            return View();
-        }
-
+       // GET: Course/Edit
         public ActionResult Edit()
         {
             return View();
@@ -65,7 +60,11 @@ namespace MidtermVersion.Controllers
         // GET: Course/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            ApplicationDbContext db = new ApplicationDbContext();
+            var course = db.Course.Where(x => x.Id == id).FirstOrDefault();
+
+            return View(course);
+            
         }
 
         // POST: Course/Edit/5
@@ -74,6 +73,10 @@ namespace MidtermVersion.Controllers
         {
             try
             {
+                ApplicationDbContext db = new ApplicationDbContext();
+                var courses = db.Course.Where(x => x.Id == id).FirstOrDefault();
+
+                db.Course.Remove(courses);
                 // TODO: Add update logic here
 
                 return RedirectToAction("Index");

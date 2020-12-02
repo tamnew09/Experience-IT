@@ -77,11 +77,7 @@ namespace MidtermVersion.Controllers
         // GET: Student/Delete/5
         public ActionResult Delete(int id)
         {
-            ApplicationDbContext db = new ApplicationDbContext();
-            var student = db.Student.Where(x => x.Id == id).FirstOrDefault();
-
-            db.Student.Remove(student);
-
+           
             return View();
         }
 
@@ -91,6 +87,11 @@ namespace MidtermVersion.Controllers
         {
             try
             {
+                ApplicationDbContext db = new ApplicationDbContext();
+                var student = db.Student.Where(x => x.Id == id).FirstOrDefault();
+
+                db.Student.Remove(student);
+
                 // TODO: Add delete logic here
 
                 return RedirectToAction("Index");

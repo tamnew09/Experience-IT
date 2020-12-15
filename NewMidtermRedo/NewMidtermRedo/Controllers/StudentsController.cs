@@ -13,7 +13,7 @@ namespace NewMidtermRedo.Controllers
     public class StudentsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
+        // comment Hey There
         // GET: Students
         public ActionResult Index()
         {

@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-Spice-E4DBB1C1-776B-4853-AA64-E6517C5E54A7</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20201229211415_AddMenu1ItemToDatabase.cs" />
+    <Compile Remove="Data\Migrations\20201229211415_AddMenu1ItemToDatabase.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201229213246_AddMenu11ItemToDatabase.cs" />
+    <Compile Remove="Data\Migrations\20201229213246_AddMenu11ItemToDatabase.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210103165436_AddShoppingCartToDb.cs" />
+    <Compile Remove="Data\Migrations\20210103165436_AddShoppingCartToDb.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="Stripe.net" Version="39.31.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+</Project>

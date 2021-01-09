@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Spice.Data;
+using Spice.Service;
 using Spice.Services;
 using Spice.Utility;
 using Stripe;
@@ -40,6 +41,8 @@ namespace Spice
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.Configure<StripeSettings>(Configuration.GetSection("Stripe"));
+            services.AddSingleton<IEmailSender, EmailSender>();
+            services.Configure<EmailOptions>(Configuration);
             services.AddControllersWithViews();
             services.AddRazorPages().AddRazorRuntimeCompilation();
 

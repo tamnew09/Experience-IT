@@ -1024,3 +1024,5 @@ C:\Users\Tamla Newsome\OneDrive\Desktop\New folder\ExperienceIT\Experience-IT\Sp
 C:\Users\Tamla Newsome\OneDrive\Desktop\New folder\ExperienceIT\Experience-IT\Spice\obj\Debug\netcoreapp3.1\Spice.pdb
 C:\Users\Tamla Newsome\OneDrive\Desktop\New folder\ExperienceIT\Experience-IT\Spice\obj\Debug\netcoreapp3.1\Spice.genruntimeconfig.cache
 C:\Users\Tamla Newsome\OneDrive\Desktop\New folder\ExperienceIT\Experience-IT\Spice\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\UserName\Default.cshtml.g.cs
+C:\Users\Tamla Newsome\OneDrive\Desktop\New folder\ExperienceIT\Experience-IT\Spice\bin\Debug\netcoreapp3.1\SendGrid.dll
+C:\Users\Tamla Newsome\OneDrive\Desktop\New folder\ExperienceIT\Experience-IT\Spice\bin\Debug\netcoreapp3.1\StarkbankEcdsa.dll

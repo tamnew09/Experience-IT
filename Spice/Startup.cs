@@ -43,6 +43,13 @@ namespace Spice
             services.AddControllersWithViews();
             services.AddRazorPages().AddRazorRuntimeCompilation();
 
+            services.AddAuthentication().AddFacebook(facebookOptions =>
+            {
+                facebookOptions.AppId = "237274087794440";
+                facebookOptions.AppSecret = "ec5aa73f466699b5bce1b23e10d141c0";
+            });
+
+
             services.AddSingleton<IEmailSender, EmailSender>();
 
             services.AddSession(options =>
